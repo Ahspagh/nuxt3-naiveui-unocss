@@ -1,0 +1,25 @@
+{
+  "name": "nuxt3-naiveui-unocss",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "nuxt": "^3.3.1",
+    "tailwindcss": "^3.2.7"
+  },
+  "dependencies": {
+    "@huntersofbook/naive-ui-nuxt": "^0.7.1",
+    "@nuxtjs/i18n": "^7.3.1",
+    "@pinia/nuxt": "^0.4.7",
+    "@unocss/nuxt": "^0.50.4",
+    "@vueuse/nuxt": "^9.13.0",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.1"
+  }
+}

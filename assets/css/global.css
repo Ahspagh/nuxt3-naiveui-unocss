@@ -1,0 +1,12 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap'); */
+/* @import url('https://unpkg.com/@chinese-fonts/dyh@1.1.0/dist/SmileySans-Oblique/result.css') */
+@import './fonts.css';
+
+body {
+  margin: 0px;
+  font-family: "Smiley Sans Oblique,Sono, sans-serif";
+}
+
+.avatar {
+  @apply w-50px border-5px border-red rounded-full inline-block
+}
