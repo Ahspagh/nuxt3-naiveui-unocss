@@ -35,6 +35,9 @@ watchEffect(() => {
 // 获取状态，转换为Ref 
 const store = useUser()
 const { isLogin } = storeToRefs(store)
+definePageMeta({
+  middleware:['auth']
+})
 useHead({
   title: router.params.id as string,
   //   meta: [

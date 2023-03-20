@@ -1,8 +1,8 @@
 
 
 <script setup lang="ts">
-import { NImage } from 'naive-ui'
-const { message } = await $fetch('/api/hello')
+const { messageInfo } = await $fetch('/api/hello')
+
 const posts = await $fetch('/api/posts')
 let testComposables = useFoo()
 console.log('testComposables', testComposables)
@@ -10,11 +10,21 @@ const { x, y } = useMouse()
 useHead({
   title: '文章列表',
 })
-</script>
 
+const ins = getCurrentInstance();
+let show = ref(true)
+onMounted(() => {
+  // ins?.proxy?.$alert('component mounted!')
+  show.value=false
+  window.$message.success(
+    'Cause you walked hand in hand With another man in my place'
+  )
+});
+</script>
 <style ></style>
 
 <template>
+  
   <div class="flex items-center flex-col gap-2">
     <h1>Index Page</h1>
     <NButton>hello naive</NButton>
@@ -25,7 +35,7 @@ useHead({
       </Nuxt-link>
       <p class="text-slate-500 w">发布于：{{ post.date }}</p>
     </div>
-    <modelTest v-model:title="message"></modelTest>
+    <modelTest v-model:title="messageInfo"></modelTest>
     <div>pos: {{ x }}, {{ y }}</div>
     <div>
       <NButton type="error">hello</NButton>

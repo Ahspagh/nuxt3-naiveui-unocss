@@ -16,14 +16,16 @@
              独立API组件useDialog、useMessage、useNotification、useLoadingBar
   -->
     <!--  :locale="zhCN"  :date-locale="dateZhCN" 	; zhTW 	dateZhTW-->
-    <NScrollbar
-      id="appContainer"
-      :class="['max-h-screen', { dark: theme.dark }]"
-    >
-      <NuxtLayout>
-        <NuxtPage></NuxtPage>
-      </NuxtLayout>
-    </NScrollbar>
+    <n-message-provider>
+      <NScrollbar
+        id="appContainer"
+        :class="['max-h-screen', { dark: theme.dark }]"
+      >
+        <NuxtLayout>
+          <NuxtPage></NuxtPage>
+        </NuxtLayout>
+      </NScrollbar>
+    </n-message-provider>
     <n-global-style />
     <!--n-global-style 主题样式可添加到body上  -->
   </n-config-provider>
@@ -45,6 +47,15 @@ const { theme } = useAppConfig()
 // const { value: storeTheme } = useStorage('theme', theme)
 // 当前操作系统的主题是
 const osTheme = useOsTheme()
+// const message = useMessage()
+// // 搭配在app.vue中或者外部需要使用messageProvider 
+// 或者离开setup使用createDiscreteApi来对应创建脱离上下文的UI-API 但不会被创建在主题下 
+// 或者在setup顶层中挂载到window下 在window下使用API
+// message.warning('这是一条warning message')
+// const ins = getCurrentInstance();
+// onMounted(() => {
+//   ins?.proxy?.$alert('component mounted!')
+// });
 </script>
 
 <style scoped></style>

@@ -74,10 +74,24 @@ export default defineNuxtConfig({
     app: {
         head: {
             viewport: 'width=750',
-            title: 'My App',
+            // 设置meta的标题模板 子页面usehead设置title时可以传入s 这里配置无效 写在APP.vue
+            titleTemplate: s => {
+                return s ? `${s} - My Nuxt3 APP` : 'My Nuxt3 APP'
+            },
             // meta: [
             //     { name: 'naive-ui-style' }
             // ]
+            // link: [{
+            //     rel: 'preload',
+            //     href: './fonts/Lato-Regular.ttf',
+            //     as: "font",
+            //     type: "font/ttf"
+            // }]
         },
+    },
+    nitro: {
+        prerender: {
+            // routes:[] //服务端预渲染路径
+        }
     }
 })

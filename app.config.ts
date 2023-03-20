@@ -1,7 +1,8 @@
 
 import { GlobalThemeOverrides } from 'naive-ui'
 const bodyCommon = {
-    fontFamily: "Smiley Sans Oblique,Sono, v-sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
+    // lato无中文字体时试用下一个字体
+    fontFamily: "lato,Smiley Sans Oblique, v-sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol",
     fontSize: 'unset',
     lineHeight: 'unset',
 

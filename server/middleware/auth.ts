@@ -11,6 +11,7 @@ export default defineEventHandler((event) => {
 });
 
 function protectAuthRoute(event: H3Event) {
+    // 接口保护 
     const protectedRoutes = ["/api/needAuth"];
     // path 不以 protectedRoutes 中任何项为起始则允许请求
     if (
@@ -23,6 +24,7 @@ function protectAuthRoute(event: H3Event) {
 }
 
 // 检查是否已认证
+// 检查指定接口请求中是否包含 token
 function authCheck(event: H3Event) {
     const token = getHeader(event, "token");
     if (!token) {
