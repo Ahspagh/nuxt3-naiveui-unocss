@@ -1,44 +1,15 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 + NaiveUI + UnoCSS 
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
 
-Make sure to install the dependencies:
+0.学习nuxt3的一些过程
+1.NaiveUI、UnoCss
+2.markdownit+hightlight 
+3.strapi4 使用 graphql 对接API
+4.Pinia 以及一些学习注释
+5.i18n相关待续……
 
-```bash
-# yarn
-yarn install
 
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-尝试使用git config user.name
