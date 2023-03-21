@@ -1,10 +1,11 @@
-import { computed, defineComponent, ref } from 'vue'
+import { computed, ref } from 'vue'
 import {
     createDiscreteApi,
     ConfigProviderProps,
     darkTheme,
     lightTheme,
 } from 'naive-ui'
+
 const themeRef = ref<'light' | 'dark'>('light')
 const configProviderPropsRef = computed<ConfigProviderProps>(() => ({
     theme: themeRef.value === 'light' ? lightTheme : darkTheme

@@ -10,7 +10,11 @@
     <div class="bg-white dark:bg-slate-600 dark:text-slate-200">
       <label>
         dark mode:
-        <NSwitch id="toggle" v-model:value="appConfig.theme.dark" />
+        <NSwitch
+          id="toggle"
+          v-model:value="isDark"
+          @update:value="globalState.handleChangeTheme"
+        />
       </label>
       <Avatar></Avatar>
       <NButton @click="showModal = true">show Modal</NButton>
@@ -32,6 +36,13 @@
   </ClientOnly>
 </template>
 <script setup lang="ts">
-const appConfig = useAppConfig()
-const showModal = ref(false)
+// const appConfig = useAppConfig();
+const showModal = ref(false);
+
+const globalState = useUser();
+const { isDark } = storeToRefs(globalState);
+// const handleChangeTheme = (value: boolean) => {
+//   const { $themeChange } = useNuxtApp();
+//   $themeChange(value);
+// };
 </script>

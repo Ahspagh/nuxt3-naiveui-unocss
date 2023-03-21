@@ -16,7 +16,8 @@ export default defineNuxtConfig({
                     'acceptHMRUpdate'
                 ]
             }
-        ]
+        ],
+        '@pinia-plugin-persistedstate/nuxt'
     ],
     unocss: {
         // presets
@@ -69,7 +70,7 @@ export default defineNuxtConfig({
         }
     },
     devServer: {
-        // port: 6725
+        port: 6725
     },
     app: {
         head: {

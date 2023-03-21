@@ -1,30 +1,31 @@
-
-
 <script setup lang="ts">
-const { messageInfo } = await $fetch('/api/hello')
+const { messageInfo } = await $fetch('/api/hello');
 
-const posts = await $fetch('/api/posts')
-let testComposables = useFoo()
-console.log('testComposables', testComposables)
-const { x, y } = useMouse()
+const posts = await $fetch('/api/posts');
+let testComposables = useFoo();
+console.log('testComposables', testComposables);
+const { x, y } = useMouse();
 useHead({
   title: '文章列表',
-})
+});
 
-const ins = getCurrentInstance();
-let show = ref(true)
+// const ins = getCurrentInstance();
+let show = ref(true);
 onMounted(() => {
   // ins?.proxy?.$alert('component mounted!')
-  show.value=false
-  window.$message.success(
+  show.value = false;
+  // window.$message.success(
+  //   'Cause you walked hand in hand With another man in my place'
+  // )
+  const { $message } = useNuxtApp();
+  $message.success(
     'Cause you walked hand in hand With another man in my place'
-  )
+  );
 });
 </script>
-<style ></style>
+<style></style>
 
 <template>
-  
   <div class="flex items-center flex-col gap-2">
     <h1>Index Page</h1>
     <NButton>hello naive</NButton>

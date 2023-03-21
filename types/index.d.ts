@@ -27,7 +27,11 @@ declare global {
 declare module '#app' {
     interface NuxtApp {
         $format(date?: Date, msg?: string): string,
-
+        $message: MessageApi,
+        $notification: NotificationApi,
+        $dialog: DialogApi,
+        $loadingBar: LoadingBarApi,
+        $themeChange(isDark?: boolean): undefined
     }
 }
 
@@ -35,6 +39,11 @@ declare module '#app' {
 declare module 'vue' {
     interface ComponentCustomProperties {
         $format(date?: Date, msg?: string): string,
+        $message: MessageApi,
+        $notification: NotificationApi,
+        $dialog: DialogApi,
+        $loadingBar: LoadingBarApi,
+        $themeChange(isDark?: boolean): undefined
 
     }
 }
