@@ -5,6 +5,9 @@
   Maintainer: @highlightjs/core-team
   Version: 2021.09.0
 */
+code{
+  font-family:lato
+}
 pre code.hljs {
   display: block;
   overflow-x: auto;

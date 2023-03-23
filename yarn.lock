@@ -2458,6 +2458,11 @@ cuint@^0.2.2:
   resolved "https://registry.npmmirror.com/cuint/-/cuint-0.2.2.tgz#408086d409550c2631155619e9fa7bcadc3b991b"
   integrity sha512-d4ZVpCW31eWwCMe1YT3ur7mUDnTXbgwyzaL320DrcRT45rfjYxkt5QWLrmOJ+/UEAI2+fQgKe/fCjR8l4TpRgw==
 
+cz-git@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.npmmirror.com/cz-git/-/cz-git-1.6.1.tgz#8e7db8204b1c663cef566f124941133a28e3d85d"
+  integrity sha512-+ohk/MFETERw4o/WpN3hUk7GM8oAwnaQI/uDuREGm4/B+G3DghGvNZQ/0MbFqZHWgKWvMzNZI6eKmPo0uPCu1A==
+
 data-uri-to-buffer@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmmirror.com/data-uri-to-buffer/-/data-uri-to-buffer-4.0.1.tgz#d8feb2b2881e6a4f58c2e08acfd0e2834e26222e"
