@@ -5,5 +5,10 @@
 	"esModuleInterop": true,
 	// 用来引入json到TS
 	// https://nuxt.com/docs/guide/concepts/typescript
-	"extends": "./.nuxt/tsconfig.json"
+	"extends": "./.nuxt/tsconfig.json",
+  "ts-node":{
+    "compilerOptions":{
+      "module":"CommonJS"
+    }
+  }
 }

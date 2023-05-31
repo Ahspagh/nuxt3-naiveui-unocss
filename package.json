@@ -1,34 +1,44 @@
 {
-  "name": "nuxt3-naiveui-unocss",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "commit": "git-cz"
-  },
-  "devDependencies": {
-    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
-    "@types/markdown-it": "^12.2.3",
-    "cz-git": "^1.6.1",
-    "nuxt": "^3.3.1",
-    "tailwindcss": "^3.2.7"
-  },
-  "dependencies": {
-    "@huntersofbook/naive-ui-nuxt": "^0.7.1",
-    "@nuxtjs/i18n": "^7.3.1",
-    "@pinia/nuxt": "^0.4.7",
-    "@unocss/nuxt": "^0.50.6",
-    "@vueuse/nuxt": "^9.13.0",
-    "dayjs": "^1.11.7",
-    "gray-matter": "^4.0.3",
-    "markdown-it": "^13.0.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-git"
-    }
-  }
+	"name": "nuxt3-naiveui-unocss",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"commit": "git-cz",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"test:unit": "vitest",
+    "migrate": "npx prisma migrate dev --name init --schema server/database/schema.prisma"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^0.38.6",
+		"@iconify-json/vscode-icons": "^1.1.25",
+		"@nuxt/test-utils": "^3.4.3",
+		"@pinia-plugin-persistedstate/nuxt": "^1.1.1",
+		"@types/markdown-it": "^12.2.3",
+		"cz-git": "^1.6.1",
+		"eslint": "^8.40.0",
+		"nuxt": "^3.3.1",
+		"tailwindcss": "^3.2.7",
+		"vitest": "^0.31.0"
+	},
+	"dependencies": {
+		"@huntersofbook/naive-ui-nuxt": "^0.7.1",
+		"@nuxt-themes/docus": "^1.11.1",
+		"@nuxtjs/i18n": "^7.3.1",
+		"@pinia/nuxt": "^0.4.7",
+		"@unocss/nuxt": "^0.50.6",
+		"@vueuse/nuxt": "^9.13.0",
+		"dayjs": "^1.11.7",
+		"gray-matter": "^4.0.3",
+		"markdown-it": "^13.0.1"
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	}
 }
